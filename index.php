@@ -20,7 +20,7 @@ $twig = new Twig_Environment($loader, [
 
 $article = [
     'name'  => 'My beautiful Article',
-    'content'   => 'hi, it\'s my content',
+    'content'   => 'Hi, BITCH, it\'s my content',
     'enabled'   => true,
     'date'      => new DateTime('now'),
 ];
