@@ -1,0 +1,15 @@
+{
+    "name": "breubz/twig-a2",
+    "description": "First Twig",
+    "require": {
+        "twig/twig": "1.16.*"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Antoine EISELE",
+            "email": "Antoine_eisele@hotmail.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}
