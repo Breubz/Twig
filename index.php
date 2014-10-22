@@ -40,8 +40,8 @@ $articles = [
 
 ];
 
-$twig->render('article.html.twig');
+$twig->render('blog.html.twig');
 
-echo $twig->render('article.html.twig', [
+echo $twig->render('blog.html.twig', [
     'articles'=> $articles,
 ]);
