@@ -18,6 +18,22 @@ $twig = new Twig_Environment($loader, [
    //'cache => null,
 ]);
 
+$dsn = 'mysql:host=localhost;dbname=blog';
+$user = 'root';
+$password = 'rtoot';
+
+try {
+    $pdo = new PDO($dsn, $user, $password);
+}   catch(PDOException $e){
+    var_dump($e);
+}
+
+
+
+
+/**
+$dbh = new PDO('mysql:host=localhost;dbname=blog', $user, $pass);
+
 $articles = [
     [
         'name'  => 'My beautiful Article',
@@ -39,6 +55,8 @@ $articles = [
     ],
 
 ];
+**/
+
 
 
 echo $twig->render('Blog/article.html.twig', [
