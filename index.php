@@ -25,7 +25,9 @@ $password = 'rtoot';
 try {
     $pdo = new PDO($dsn, $user, $password);
 }   catch(PDOException $e){
-    var_dump($e);
+    mail('Antoine_eisele+error@hotmail.com','Erreur sur le site', $e->getMessage());
+    echo 'Erreur de connexion à la DB';
+    //var_dump($e);
 }
 
 
