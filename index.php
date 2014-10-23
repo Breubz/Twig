@@ -20,16 +20,20 @@ $twig = new Twig_Environment($loader, [
 
 $dsn = 'mysql:host=localhost;dbname=blog';
 $user = 'root';
-$password = 'rtoot';
+$password = 'root';
 
 try {
     $pdo = new PDO($dsn, $user, $password);
 }   catch(PDOException $e){
-    mail('Antoine_eisele+error@hotmail.com','Erreur sur le site', $e->getMessage());
-    echo 'Erreur de connexion à la DB';
+    @mail('Antoine_eisele+error@hotmail.com','Erreur sur le site', $e->getMessage());
+    echo 'Erreur de connexion a la DB';
+    die;
     //var_dump($e);
 }
 
+$sql = "SELECT * FROM article";
+$pdoStmt = $pdo->query($sql);
+$articles = ($pdoStmt->fetchAll(PDO::FETCH_OBJ));
 
 
 
